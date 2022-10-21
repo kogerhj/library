@@ -30,6 +30,8 @@ body {
 }
 
 header {
+    font-size: 1.4rem;
+    font-weight: 500;
     color: #ececec;
     background-color:#385170;
 }
@@ -55,9 +57,12 @@ ul > li {
 }
 
 .btn {
+    font-size: 1rem;
+    font-weight: 500;
     padding: 0.3rem 0;
     width: 80px;
     background-color:#ececec;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }

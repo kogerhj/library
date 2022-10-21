@@ -13,3 +13,5 @@ Book.prototype.logInfo = function () {
     }
 }
 
+let myLibrary = [];
+

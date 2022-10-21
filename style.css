@@ -65,4 +65,9 @@ ul > li {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: 0.2s;
+}
+.btn:hover {
+    background-color: white;
+    transform: scale(1.05);
 }

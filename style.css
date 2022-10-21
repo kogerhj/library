@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+/*Color palette for easy reference*/
 .first-color { 
 	background: #ececec; 
 }
@@ -18,4 +20,19 @@
 
 .fourth-color { 
 	background: #142d4c; 
+}
+
+
+/*Basic style rules*/
+body {
+    background-color:#9fd3c7;
+}
+
+header {
+    color: #ececec;
+    background-color:#385170;
+}
+
+.header-title {
+    padding: 1rem;
 }

@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.first-color { 
+	background: #ececec; 
+}
+	
+.second-color { 
+	background: #9fd3c7; 
+}
+
+.third-color { 
+	background: #385170; 
+}
+
+.fourth-color { 
+	background: #142d4c; 
+}

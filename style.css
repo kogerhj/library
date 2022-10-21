@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
 }
 
 
@@ -34,5 +35,29 @@ header {
 }
 
 .header-title {
-    padding: 1rem;
+    padding: 1.5rem;
+}
+
+main > header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+main > header > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5rem 0;
+}
+
+
+ul > li {
+    list-style: none;
+}
+
+.btn {
+    padding: 0.3rem 0;
+    width: 80px;
+    background-color:#ececec;
+    border: none;
+    cursor: pointer;
 }

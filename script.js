@@ -1,3 +1,6 @@
+let myLibrary = [];
+
+
 function Book(title, author, pages, read) {
     this.title = title
     this.author = author
@@ -13,5 +16,4 @@ Book.prototype.logInfo = function () {
     }
 }
 
-let myLibrary = [];
 

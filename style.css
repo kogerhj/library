@@ -71,3 +71,17 @@ ul > li {
     background-color: white;
     transform: scale(1.05);
 }
+
+/*Bookshelf*/
+.article-container {
+    padding: 2rem;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+}
+
+.card {
+    padding: 3rem;
+    background-color:#ececec;
+    text-align: center;
+}

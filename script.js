@@ -20,6 +20,9 @@ Book.prototype.logInfo = function () {
 function createBookshelf() {
     for (let i = 0; i < myLibrary.length; i++) {
         const card = document.createElement('div')
+        let title = document.createElement('h3')
+        title.append(`${myLibrary[i]}`)
+        card.appendChild(title)
         card.classList.add('card')
         bookshelf.appendChild(card)
         console.log(card)

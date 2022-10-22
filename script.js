@@ -1,5 +1,7 @@
-let myLibrary = ["Book One", "Book Two", "Book Three"];
+let myLibrary = [];
 const bookshelf = document.querySelector(".article-container")
+myLibrary.push(new Book('The Hobbit', 'J.J.R. Tolkein', '300', true), new Book('Cage of Souls', 'Andrain Tchaikovsky', '650', false))
+
 
 function Book(title, author, pages, read) {
     this.title = title
@@ -9,7 +11,7 @@ function Book(title, author, pages, read) {
 }
 
 Book.prototype.logInfo = function () {
-    if(this.read) {
+    if (this.read) {
         return `${this.title} by ${this.author}, ${this.pages} pages, book read`
     } else {
         return `${this.title} by ${this.author}, ${this.pages} pages, not read`
@@ -20,9 +22,9 @@ Book.prototype.logInfo = function () {
 function createBookshelf() {
     for (let i = 0; i < myLibrary.length; i++) {
         const card = document.createElement('div')
-        let title = document.createElement('h3')
-        title.append(`${myLibrary[i]}`)
-        card.appendChild(title)
+        let info = document.createElement('p')
+        info.append(`${myLibrary[i].logInfo()}`)
+        card.appendChild(info)
         card.classList.add('card')
         bookshelf.appendChild(card)
         console.log(card)

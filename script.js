@@ -1,5 +1,5 @@
-let myLibrary = [];
-
+let myLibrary = ["Book One", "Book Two", "Book Three"];
+const bookshelf = document.querySelector(".article-container")
 
 function Book(title, author, pages, read) {
     this.title = title
@@ -17,3 +17,14 @@ Book.prototype.logInfo = function () {
 }
 
 
+function createBookshelf() {
+    for (let i = 0; i < myLibrary.length; i++) {
+        const card = document.createElement('div')
+        card.classList.add('card')
+        bookshelf.appendChild(card)
+        console.log(card)
+    }
+}
+
+console.log(bookshelf)
+createBookshelf()

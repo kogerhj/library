@@ -1,6 +1,6 @@
 let myLibrary = [];
 const bookshelf = document.querySelector(".article-container")
-myLibrary.push(new Book('The Hobbit', 'J.J.R. Tolkein', '300', true), new Book('Cage of Souls', 'Andrain Tchaikovsky', '650', false))
+myLibrary.push(new Book('The Hobbit', 'J.J.R. Tolkein', '300', true), new Book('Cage of Souls', 'Adrian Tchaikovsky', '650', false))
 
 
 function Book(title, author, pages, read) {

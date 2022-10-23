@@ -3,6 +3,13 @@ const bookshelf = document.querySelector(".article-container")
 myLibrary.push(new Book('The Hobbit', 'J.J.R. Tolkein', '300', true), new Book('Cage of Souls', 'Adrian Tchaikovsky', '650', false))
 
 
+const addButton = document.querySelector('.add-btn')
+const addForm = document.querySelector('.book-form')
+const overlay = document.querySelector('#overlay')
+
+
+console.log(addButton)
+
 function Book(title, author, pages, read) {
     this.title = title
     this.author = author
@@ -31,5 +38,9 @@ function createBookshelf() {
     }
 }
 
-console.log(bookshelf)
 createBookshelf()
+
+addButton.addEventListener('click', () => {
+    addForm.classList.add('active')
+    overlay.classList.add('active')
+})

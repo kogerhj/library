@@ -6,6 +6,8 @@ myLibrary.push(new Book('The Hobbit', 'J.J.R. Tolkein', '300', true), new Book('
 const addButton = document.querySelector('.add-btn')
 const addForm = document.querySelector('.book-form')
 const overlay = document.querySelector('#overlay')
+const closeButton = document.querySelector('.close-btn')
+
 
 
 console.log(addButton)
@@ -43,4 +45,9 @@ createBookshelf()
 addButton.addEventListener('click', () => {
     addForm.classList.add('active')
     overlay.classList.add('active')
+})
+
+closeButton.addEventListener('click', () => {
+    addForm.classList.remove('active')
+    overlay.classList.remove('active')
 })

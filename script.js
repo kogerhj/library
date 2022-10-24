@@ -2,22 +2,14 @@ let myLibrary = [];
 const bookshelf = document.querySelector(".article-container")
 myLibrary.push(new Book('The Hobbit', 'J.J.R. Tolkein', '300', true), new Book('Cage of Souls', 'Adrian Tchaikovsky', '650', false))
 
-
 const addButton = document.querySelector('.add-btn')
 const addForm = document.querySelector('.book-form')
 const overlay = document.querySelector('#overlay')
 const closeButton = document.querySelector('.close-btn')
+const bookTitle = document.querySelector('#title')
+const bookAuthor = document.querySelector('#author')
+const bookePages = document.querySelector('#pages')
 
-
-
-console.log(addButton)
-
-function Book(title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-}
 
 Book.prototype.logInfo = function () {
     if (this.read) {
@@ -27,6 +19,12 @@ Book.prototype.logInfo = function () {
     }
 }
 
+function Book(title, author, pages, read) {
+    this.title = title
+    this.author = author
+    this.pages = pages
+    this.read = read
+}
 
 function createBookshelf() {
     for (let i = 0; i < myLibrary.length; i++) {
@@ -47,7 +45,12 @@ addButton.addEventListener('click', () => {
     overlay.classList.add('active')
 })
 
-closeButton.addEventListener('click', () => {
-    addForm.classList.remove('active')
-    overlay.classList.remove('active')
-})
+// closeButton.addEventListener('click', () => {
+//     addForm.classList.remove('active')
+//     overlay.classList.remove('active')
+// })
+
+//Create function that takes the input from each 
+//respective field of the form and put 
+//in the Book constructor, then pushes it to the
+//myLibrary array

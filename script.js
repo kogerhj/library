@@ -27,28 +27,28 @@ function Book(title, author, pages, read) {
 }
 
 function createBookshelf() {
-    for (let i = 0; i < myLibrary.length; i++) {
-        const card = document.createElement('div')
-        let info = document.createElement('p')
-        info.append(`${myLibrary[i].logInfo()}`)
-        card.appendChild(info)
-        card.classList.add('card')
-        bookshelf.appendChild(card)
-        console.log(card)
-    }
+    const card = document.createElement('div')
+    let info = document.createElement('p')
+    info.append(`${myLibrary[myLibrary.length - 1].logInfo()}`)
+    card.appendChild(info)
+    card.classList.add('card')
+    bookshelf.appendChild(card)
+}
+
+function activateForm() {
+    addForm.classList.add('active')
+    overlay.classList.add('active')
+}
+
+function removeForm() {
+    addForm.classList.remove('active')
+    overlay.classList.remove('active')
 }
 
 
+addButton.addEventListener('click', () => activateForm())
 
-addButton.addEventListener('click', () => {
-    addForm.classList.add('active')
-    overlay.classList.add('active')
-})
-
-closeButton.addEventListener('click', () => {
-    addForm.classList.remove('active')
-    overlay.classList.remove('active')
-})
+closeButton.addEventListener('click', () => removeForm())
 
 //Create function that takes the input from each 
 //respective field of the form and put 
@@ -56,6 +56,7 @@ closeButton.addEventListener('click', () => {
 //myLibrary array
 
 addBookButton.addEventListener('click', () => {
-   myLibrary.push(new Book(bookTitle.value, bookAuthor.value, bookePages.value, true))
-   createBookshelf()
+    myLibrary.push(new Book(bookTitle.value, bookAuthor.value, bookePages.value, true))
+    createBookshelf()
+    removeForm()
 })

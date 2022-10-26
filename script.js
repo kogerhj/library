@@ -8,8 +8,9 @@ const closeButton = document.querySelector('.close-btn')
 let bookTitle = document.querySelector('#title')
 let bookAuthor = document.querySelector('#author')
 let bookePages = document.querySelector('#pages')
+let bookRead = document.querySelector('#yes')
+let bookNotRead = document.querySelector('#no')
 const addBookButton = document.querySelector('.add-book')
-
 
 Book.prototype.logInfo = function () {
     if (this.read) {
@@ -26,7 +27,7 @@ function Book(title, author, pages, read) {
     this.read = read
 }
 
-function createBookshelf() {
+function addToBookshelf() {
     const card = document.createElement('div')
     let info = document.createElement('p')
     info.append(`${myLibrary[myLibrary.length - 1].logInfo()}`)
@@ -57,6 +58,8 @@ closeButton.addEventListener('click', () => removeForm())
 
 addBookButton.addEventListener('click', () => {
     myLibrary.push(new Book(bookTitle.value, bookAuthor.value, bookePages.value, true))
-    createBookshelf()
+    addToBookshelf()
     removeForm()
 })
+
+

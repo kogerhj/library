@@ -30,10 +30,15 @@ function Book(title, author, pages, read) {
 function addToBookshelf() {
     const card = document.createElement('div')
     let info = document.createElement('p')
+    let delButton = document.createElement('button')
     info.append(`${myLibrary[myLibrary.length - 1].logInfo()}`)
+    delButton.append('Remove')
+    delButton.classList.add('delButton')
     card.appendChild(info)
     card.classList.add('card')
+    card.appendChild(delButton)
     bookshelf.appendChild(card)
+    
 }
 
 function activateForm() {
